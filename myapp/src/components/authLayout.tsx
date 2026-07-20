@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         borderTopRightRadius : 38,
         borderTopLeftRadius: 38,
         alignItems: "center",
-        padding:20,
+        padding: 30,
 
 
     },

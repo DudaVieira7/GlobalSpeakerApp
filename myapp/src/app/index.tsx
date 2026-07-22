@@ -1,12 +1,11 @@
 
 import AuthLayout from "@/components/authLayout";
-import Line from "@/components/line";
-import Input from "@/components/input";
+import {Line} from "@/components/line";
+import {Input} from "@/components/input";
 import Fontisto from "@expo/vector-icons/Fontisto";
 import Feather from '@expo/vector-icons/Feather';
-import { StyleSheet, View, Text, TextInput } from "react-native";
-import {Slot, SplashScreen} from "expo-router";
- 
+import { StyleSheet, View, Text, } from "react-native";
+
 export default function Index(){
     return(
        
@@ -16,20 +15,20 @@ export default function Index(){
                 <Text style={styles.titulo}>Login</Text>
                 <Line color="#8b76a536" thickness={1} verticalMargin={10} width="90%"></Line>
                 <Input 
-          label="E-mail"
-          placeholder="Digite seu e-mail"
-          icon={<Fontisto name="email" size={20} color="#8B76A5" />}
-          keyboardType="email-address"
-        />
+                    label="E-mail"
+                    placeholder="Digite seu e-mail"
+                    icon={<Fontisto name="email" size={20} color="#8B76A5" />}
+                    keyboardType="email-address"
+                />
 
-        {/* Senha alterando a cor do label para verde (exemplo) */}
-        <Input 
-        label="Senha" 
-        placeholder="Digite sua senha" 
-        icon={<Feather name="lock" size={20} color="#8B76A5" />}
-        secureTextEntry  // faz parte das TextInputProps
-        />
-        <Line color="#8b76a536" thickness={1} verticalMargin={10} width="90%"></Line>
+       
+                <Input 
+                    label="Senha" 
+                    placeholder="Digite sua senha" 
+                    icon={<Feather name="lock" size={20} color="#8B76A5" />}
+                    secureTextEntry  // faz parte das TextInputProps
+                />
+                <Line color="#8b76a536" thickness={1} verticalMargin={10} width="90%"></Line>
                
             </View>
             

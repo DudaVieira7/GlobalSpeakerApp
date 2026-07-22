@@ -42,7 +42,7 @@ export function Input({
 const styles = StyleSheet.create({
     container :{
         width: "100%",
-        marginBottom: 20,
+        marginBottom: 10,
         marginTop: 0
     },
     label :{

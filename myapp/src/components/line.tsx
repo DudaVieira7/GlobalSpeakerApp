@@ -7,7 +7,7 @@ type LineProps = {
   width?: DimensionValue;  //determina o comprimento que a linha vai oculpar na tela (número ou %)
 };
 
-export default function Line({
+export function Line({
   color = "#8B76A5",       // Não escolheu cor? A cor padrão fica  como : #8B76A5
   thickness = 1,           // Não escolheu grossura? a grossura padrão fica como 1px.
   verticalMargin = 15,     // Não escolheu o espaço de margin em volta da linha? o espaço padrão fica como 15px.
@@ -35,8 +35,8 @@ export default function Line({
 const styles = StyleSheet.create({
   line: {
     alignItems:"center",
-    marginBottom: 10,
-    marginTop: 10,
+    marginBottom: 2,
+    marginTop: 2,
     // Exemplo futuro: borderRadius: 5 (faria todas as linhas do app ficarem redondinhas)
     // regras fixas.
   },

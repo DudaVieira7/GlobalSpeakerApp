@@ -12,7 +12,7 @@ type InputProps = TextInputProps &{ // & além das propriedades que existe em Te
 
 
 
-export default function Input({
+export function Input({
     label,
     labelColor = "#43216D",                 // definição padrão de inputs
     backgroundColor = "#EAEAEA",
@@ -42,7 +42,8 @@ export default function Input({
 const styles = StyleSheet.create({
     container :{
         width: "100%",
-        marginBottom: 20
+        marginBottom: 20,
+        marginTop: 0
     },
     label :{
 

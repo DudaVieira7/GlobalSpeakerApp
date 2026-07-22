@@ -35,8 +35,7 @@ export function Line({
 const styles = StyleSheet.create({
   line: {
     alignItems:"center",
-    marginBottom: 2,
-    marginTop: 2,
+    margin: 10,
     // Exemplo futuro: borderRadius: 5 (faria todas as linhas do app ficarem redondinhas)
     // regras fixas.
   },

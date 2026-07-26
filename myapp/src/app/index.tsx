@@ -2,6 +2,7 @@
 import AuthLayout from "@/components/authLayout";
 import {Line} from "@/components/line";
 import {Input} from "@/components/input";
+import { Button } from "@/components/button";
 import Fontisto from "@expo/vector-icons/Fontisto";
 import Feather from '@expo/vector-icons/Feather';
 import { StyleSheet, View, Text, } from "react-native";
@@ -12,15 +13,15 @@ export default function Index(){
         <AuthLayout>
 
             <View style ={styles.container}>
-                <Text style={styles.titulo}>Login</Text>
+                <Text style={styles.title}>Login</Text>
                 <Line color="#8b76a536" thickness={1} verticalMargin={10} width="90%"></Line>
+               
                 <Input 
                     label="E-mail"
                     placeholder="Digite seu e-mail"
                     icon={<Fontisto name="email" size={20} color="#8B76A5" />}
                     keyboardType="email-address"
                 />
-
        
                 <Input 
                     label="Senha" 
@@ -28,7 +29,13 @@ export default function Index(){
                     icon={<Feather name="lock" size={20} color="#8B76A5" />}
                     secureTextEntry  // faz parte das TextInputProps
                 />
+                <Text style= {styles.subtitle}>Esqueci minha senha</Text>
+                 
+                <Button label="Entrar"/>
                 <Line color="#8b76a536" thickness={1} verticalMargin={10} width="90%"></Line>
+                <Text style ={styles.footerText}>
+                    Não tem uma conta? Criar conta
+                </Text>
                
             </View>
             
@@ -40,12 +47,22 @@ export default function Index(){
 }
 
 const styles = StyleSheet.create({
-    titulo: {
+    title: {
         color: "#7568A9",
         fontFamily: "Poppins_600SemiBold",
         fontSize: 16,
         margin: 10,
         textAlign:"center"
+
+    },
+    subtitle:{
+        color: "#691AFF",
+        fontFamily:"Poppins_400Regular",
+        left: "28%",
+        fontSize: 14,
+        padding: 10,
+        
+
 
     },
     container:{
@@ -54,6 +71,14 @@ const styles = StyleSheet.create({
         alignItems:"center"
     
     },
+
+    footerText:{
+        textAlign: "center",
+        marginTop: 24,
+        color: "#716087",
+        fontSize: 16
+
+    }
 
     
 

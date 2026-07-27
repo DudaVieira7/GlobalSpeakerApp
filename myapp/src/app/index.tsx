@@ -6,6 +6,7 @@ import { Button } from "@/components/button";
 import Fontisto from "@expo/vector-icons/Fontisto";
 import Feather from '@expo/vector-icons/Feather';
 import { StyleSheet, View, Text, } from "react-native";
+import { Link } from "expo-router";
 
 export default function Index(){
     return(
@@ -29,12 +30,12 @@ export default function Index(){
                     icon={<Feather name="lock" size={20} color="#8B76A5" />}
                     secureTextEntry  // faz parte das TextInputProps
                 />
-                <Text style= {styles.subtitle}>Esqueci minha senha</Text>
+                <Text style= {styles.subtitle}><Link href={"/forgotPassword"}>Esqueci minha senha</Link></Text>
                  
                 <Button label="Entrar"/>
                 <Line color="#8b76a536" thickness={1} verticalMargin={10} width="90%"></Line>
                 <Text style ={styles.footerText}>
-                    Não tem uma conta? Criar conta
+                    Não tem uma conta? <Link href={"/signUp"} style={styles.footerLink}>CRIAR CONTA</Link>
                 </Text>
                
             </View>
@@ -78,7 +79,12 @@ const styles = StyleSheet.create({
         color: "#716087",
         fontSize: 16
 
+    },
+    footerLink:{
+        color:"#691AFF",
     }
+
+
 
     
 

@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
 
     topContainer :{
        width: "100%",
-       flex: 0.35,
+       flex: 0.30,
        justifyContent: "center",        
      
        
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     content :{
         backgroundColor: "#F2F1F1",
         width: "100%",
-        flex: 0.65,
+        flex: 0.70,
         borderTopRightRadius : 38,
         borderTopLeftRadius: 38,
         alignItems: "center",

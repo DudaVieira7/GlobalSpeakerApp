@@ -69,7 +69,8 @@ const styles = StyleSheet.create({
     container:{
         width: "100%",
         height:"100%",
-        alignItems:"center"
+        alignItems:"center",
+        justifyContent: "space-around"
     
     },
 
@@ -77,7 +78,8 @@ const styles = StyleSheet.create({
         textAlign: "center",
         marginTop: 24,
         color: "#716087",
-        fontSize: 16
+        fontSize: 16,
+        marginBottom: 40,
 
     },
     footerLink:{

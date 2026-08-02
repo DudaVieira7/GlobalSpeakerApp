@@ -25,6 +25,7 @@ export default function ForgotPassword(){
                 label="E-mail"
                 placeholder="Digite seu E-mail"
                 icon = {<Fontisto name="email" size={20} color="#8B76A5" />}
+                keyboardType="email-address"
                 />
                 <Line color="#8b76a536" thickness={1} verticalMargin={40} width="90%"></Line>
 

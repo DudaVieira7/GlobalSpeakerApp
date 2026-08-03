@@ -6,9 +6,16 @@ import { Button } from "@/components/button";
 import Fontisto from "@expo/vector-icons/Fontisto";
 import Feather from '@expo/vector-icons/Feather';
 import { StyleSheet, View, Text, } from "react-native";
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 
 export default function Index(){
+
+    const router = useRouter();  // instância o router para trocar de página.(useRouter ->)
+
+    const changeRouter = () =>{  // função no formato de arrow function redireciona para a página da home do app.
+        router.replace('/home');
+    };
+
     return(
        
         <AuthLayout>
@@ -31,8 +38,8 @@ export default function Index(){
                     secureTextEntry  // faz parte das TextInputProps
                 />
                 <Text style= {styles.subtitle}><Link href={"/forgotPassword"}>Esqueci minha senha</Link></Text>
-                 
-                <Button label="Entrar"/>
+
+                <Button label="Entrar" onPress={changeRouter}/>
                 <Line color="#8b76a536" thickness={1} verticalMargin={10} width="90%"></Line>
                 <Text style ={styles.footerText}>
                     Não tem uma conta? <Link href={"/signUp"} style={styles.footerLink}>CRIAR CONTA</Link>
